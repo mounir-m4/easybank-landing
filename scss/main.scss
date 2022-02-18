@@ -1,0 +1,15 @@
+@use './medias/media' as *;
+@use './components/navigation' as *;
+@use './components/header' as *;
+@use './components/features' as *;
+@use './components/articles' as *;
+@use './components/footer' as *;
+@use './utilities/spacing' as *;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Public Sans', sans-serif;
+}

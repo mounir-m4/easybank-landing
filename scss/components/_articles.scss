@@ -1,0 +1,33 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+.articles {
+	&-box {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+	}
+	@include bg-lighter;
+	.article {
+		@include bg-light-md;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		border-radius: 5px;
+		&-cover {
+			width: 100%;
+			height: 10rem;
+			transition: filter 0.4s ease;
+			&:hover {
+				filter: brightness(80%);
+			}
+		}
+		&-body {
+			.article-author {
+				color: $grayish-blue;
+			}
+			.article-text {
+				color: $grayish-blue;
+				font-size: 0.95rem;
+				margin: 0.5rem 0;
+			}
+		}
+	}
+}

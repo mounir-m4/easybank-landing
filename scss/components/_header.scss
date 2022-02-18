@@ -1,0 +1,42 @@
+@use '../utilities/mixins' as *;
+.main-header {
+	@include bg-lighter;
+	position: relative;
+	overflow: hidden;
+	&-content {
+		height: 100vh;
+	}
+	.header {
+		&-description {
+			flex: 1;
+		}
+		&-hero {
+			flex: 1;
+			&::before {
+				content: '';
+				position: absolute;
+				top: -40%;
+				left: 45%;
+				height: 150%;
+				background: url('../img/bg-intro-desktop.svg');
+				background-repeat: no-repeat;
+				width: 100%;
+				background-size: 80%;
+				z-index: 1;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: -25%;
+				left: 32%;
+				background: url('../img/image-mockups.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 100%;
+				height: 130%;
+				z-index: 2;
+			}
+		}
+	}
+}

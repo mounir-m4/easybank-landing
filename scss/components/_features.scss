@@ -1,0 +1,8 @@
+@use '../utilities/mixins' as *;
+
+.features {
+	@include bg-light;
+	&-box {
+		gap: 0.5rem;
+	}
+}

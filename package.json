@@ -1,0 +1,14 @@
+{
+	"name": "easybank-landing",
+	"version": "1.0.0",
+	"description": "easybank landing page challenge on Frontend Mentor",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass --watch scss/main.scss:dist/css/main.css"
+	},
+	"author": "mounir",
+	"license": "ISC",
+	"dependencies": {
+		"sass": "^1.49.7"
+	}
+}

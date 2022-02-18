@@ -1,0 +1,56 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.main-footer {
+	@include bg-dark;
+	.col {
+		&-1 {
+			flex: 1;
+			.social {
+				margin-top: 2.6rem;
+				a {
+					height: 1.5rem;
+					svg path {
+						transition: fill 150ms ease-in;
+						&:hover {
+							fill: $lime-green;
+						}
+					}
+				}
+			}
+		}
+		&-2,
+		&-3 {
+			flex: 1;
+			ul {
+				@include reset-ul;
+				align-items: baseline;
+				flex-direction: column;
+				li {
+					margin-bottom: 1rem;
+				}
+				a {
+					@include global-a;
+					color: $light-blue;
+					&:hover {
+						color: $lime-green;
+					}
+					&:after {
+						content: none !important;
+					}
+				}
+			}
+		}
+		&-4 {
+			display: flex;
+			flex-direction: column;
+			flex: 2;
+			align-items: flex-end;
+			.lead {
+				margin: 1rem 0;
+				font-size: 0.9rem;
+				padding-right: unset;
+			}
+		}
+	}
+}
